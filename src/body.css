@@ -54,3 +54,15 @@
     background-color: SlateBlue;
     color: white;
 }
+
+@media only screen and (max-width: 600px){
+    .body{
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        padding-top: 20px;
+        height: 314vh;
+        width: 146vh;
+        position: relative;
+    }
+}
