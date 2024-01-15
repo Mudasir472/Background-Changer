@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import "./body.css"
+import "./App.css"
+import GetColor from './GetColor';
 
 function App() {
+  const [color, setColor] = useState("grey");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Muddu
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="body" style={{backgroundColor:color}}>
+       
+
+          <div className="box">
+          <GetColor color="red" name="red" setColor={setColor} className="red but"/>
+          <GetColor color="green" name="green" setColor={setColor} className="green but"/>
+          <GetColor color="blue" name="blue" setColor={setColor} className="blue but"/>
+          <GetColor color="orange" name="orange" setColor={setColor} className="orange but"/>
+          <GetColor color="violet" name="violet" setColor={setColor} className="violet but"/>
+          <GetColor color="SlateBlue" name="SlateBlue" setColor={setColor} className="SlateBlue but"/>
+          </div>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
